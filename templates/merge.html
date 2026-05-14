@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Merge PDF{% endblock %}
+
+{% block content %}
+
+<section class="tool-page">
+
+<h1>Merge PDF files</h1>
+
+<p>
+Combine PDFs in the order you want with the easiest PDF merger.
+</p>
+
+<form action="/merge" method="POST" enctype="multipart/form-data">
+
+<div class="upload-area">
+
+<input type="file" name="files" multiple required>
+
+<p>or drop PDFs here</p>
+
+</div>
+
+<button class="main-btn">
+Download Merged PDF
+</button>
+
+</form>
+
+</section>
+
+{% endblock %}

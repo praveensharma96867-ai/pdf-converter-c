@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{% block title %}PDF Tools{% endblock %}</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script defer src="{{ url_for('static', filename='script.js') }}"></script>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+I ❤️ PDF
+</div>
+
+<ul class="nav-links">
+
+<li><a href="/">Home</a></li>
+<li><a href="/merge-page">Merge PDF</a></li>
+<li><a href="/split-page">Split PDF</a></li>
+<li><a href="/compress-page">Compress PDF</a></li>
+<li><a href="/pdf-to-image-page">Convert PDF</a></li>
+
+</ul>
+
+<label class="switch">
+<input type="checkbox" id="themeToggle">
+<span class="slider"></span>
+</label>
+
+</nav>
+
+
+<!-- PAGE CONTENT -->
+
+{% block content %}{% endblock %}
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 PDF Tools</p>
+
+</footer>
+
+</body>
+</html>

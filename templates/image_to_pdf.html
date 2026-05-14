@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Image to PDF{% endblock %}
+
+{% block content %}
+
+<section class="tool-page">
+
+<h1>Image to PDF</h1>
+
+<p>Convert images into a single PDF.</p>
+
+<form action="/image-to-pdf" method="POST" enctype="multipart/form-data">
+
+<div class="upload-area">
+
+<input type="file" name="images" accept="image/*" multiple required>
+
+<p>or drop images here</p>
+
+</div>
+
+<button class="main-btn">
+Download Converted Image to PDF
+</button>
+
+</form>
+
+</section>
+
+{% endblock %}

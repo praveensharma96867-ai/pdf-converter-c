@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Compress PDF{% endblock %}
+
+{% block content %}
+
+<section class="tool-page">
+
+<h1>Compress PDF</h1>
+
+<p>Reduce the size of your PDF.</p>
+
+<form action="/compress" method="POST" enctype="multipart/form-data">
+
+<div class="upload-area">
+
+<input type="file" name="file" required>
+
+<p>or drop PDF here</p>
+
+</div>
+
+<select name="compression">
+
+<option value="1">High Quality</option>
+<option value="2">Balanced</option>
+<option value="3">Medium</option>
+<option value="4">Smallest File</option>
+
+</select>
+
+<button class="main-btn">
+Download Compressed PDF
+</button>
+
+</form>
+
+</section>
+
+{% endblock %}

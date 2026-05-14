@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Lock PDF{% endblock %}
+
+{% block content %}
+
+<section class="tool-page">
+
+<h1>Lock PDF</h1>
+
+<p>Add password protection to your PDF.</p>
+
+<form action="/lock" method="POST" enctype="multipart/form-data">
+
+<div class="upload-area">
+
+<input type="file" name="file" accept=".pdf" required>
+
+<p>or drop PDF here</p>
+
+</div>
+
+<input type="password" name="password" placeholder="Enter password" required>
+
+<br><br>
+
+<button class="main-btn">
+Download Locked PDF
+</button>
+
+</form>
+
+</section>
+
+{% endblock %}

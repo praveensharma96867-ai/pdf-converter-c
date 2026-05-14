@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Unlock PDF{% endblock %}
+
+{% block content %}
+
+<section class="tool-page">
+
+<h1>Unlock PDF</h1>
+
+<p>Remove password protection from your PDF.</p>
+
+<form action="/unlock" method="POST" enctype="multipart/form-data">
+
+<div class="upload-area">
+
+<input type="file" name="file" accept=".pdf" required>
+
+<p>or drop PDF here</p>
+
+</div>
+
+<input type="password" name="password" placeholder="Enter password" required>
+
+<br><br>
+
+<button class="main-btn">
+Download Unlocked PDF
+</button>
+
+</form>
+
+</section>
+
+{% endblock %}
